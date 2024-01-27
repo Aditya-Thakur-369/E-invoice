@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -54,10 +52,6 @@ class _LineChartSample2State extends State<LineChartSample2> {
   }
 
   Widget bottomTitleWidgets(double value, TitleMeta meta) {
-    const style = TextStyle(
-      fontWeight: FontWeight.bold,
-      fontSize: 16,
-    );
     Widget text;
     switch (value.toInt()) {
       case 2:
@@ -138,7 +132,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
           );
         },
         getDrawingVerticalLine: (value) {
-          return FlLine(
+          return  const FlLine(
             // color: AppColors.mainGridLineColor,
             color: Colors.purpleAccent,
             strokeWidth: 1,

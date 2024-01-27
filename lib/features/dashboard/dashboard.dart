@@ -128,7 +128,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
             const Row(
               children: [ExpensesChat(), AnalysisChat()],
             ),
-            SizedBox(height: 400, width: 450, child: LineChartSample2())
+            const SizedBox(height: 400, width: 450, child: LineChartSample2())
           ]),
         ),
       ),
