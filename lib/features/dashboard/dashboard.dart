@@ -1,12 +1,12 @@
-import 'package:e_invoice/features/dashboard/widgets/analysis_chart.dart';
-import 'package:e_invoice/features/dashboard/widgets/expenses_chart.dart';
+import 'package:e_invoice/features/dashboard/widgets/linechart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
-
+import 'package:e_invoice/features/dashboard/widgets/analysis_chart.dart';
 import 'package:e_invoice/features/dashboard/widgets/appbar.dart';
 import 'package:e_invoice/features/dashboard/widgets/custom_cards.dart';
 import 'package:e_invoice/features/dashboard/widgets/customcupertino_button.dart';
+import 'package:e_invoice/features/dashboard/widgets/expenses_chart.dart';
 
 class DashBoardScreen extends StatefulWidget {
   const DashBoardScreen({super.key});
@@ -114,7 +114,9 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
               children: [
                 CustomCupertinoButton(
                     image: "assets/icons/expense.png",
-                    onpress: () {},
+                    onpress: () {
+                      setState(() {});
+                    },
                     text: "Expenses"),
                 CustomCupertinoButton(
                   image: "assets/icons/analysis.png",
@@ -126,11 +128,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
             const Row(
               children: [ExpensesChat(), AnalysisChat()],
             ),
-            // SizedBox(
-            //   height: 300,
-            //   width: 420,
-            //   child: ,
-            // ),
+            SizedBox(height: 400, width: 450, child: LineChartSample2())
           ]),
         ),
       ),

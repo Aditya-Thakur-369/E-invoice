@@ -3,8 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-class ExpensesChat extends StatelessWidget {
+class ExpensesChat extends StatefulWidget {
   const ExpensesChat({super.key});
+
+  @override
+  State<ExpensesChat> createState() => _ExpensesChatState();
+}
+
+class _ExpensesChatState extends State<ExpensesChat> {
+  late TooltipBehavior _tooltipbehavior;
+
+  @override
+  void initState() {
+    _tooltipbehavior = TooltipBehavior(enable: true);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +29,7 @@ class ExpensesChat extends StatelessWidget {
       height: 200,
       width: 200,
       child: SfCircularChart(
+        tooltipBehavior: _tooltipbehavior,
         series: <CircularSeries>[
           DoughnutSeries<ChartData, String>(
             dataSource: expenses,
@@ -31,8 +45,10 @@ class ExpensesChat extends StatelessWidget {
               connectorLineSettings: const ConnectorLineSettings(
                   length: "40%", color: Colors.green),
               textStyle: GoogleFonts.plusJakartaSans(
-                  fontSize: 14, fontWeight: FontWeight.w500),
+                  fontSize: 10, fontWeight: FontWeight.w500),
             ),
+            enableTooltip: true,
+            animationDuration: 1000,
             explodeAll: true,
             innerRadius: '60%',
             explode: true,

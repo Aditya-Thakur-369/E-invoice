@@ -41,6 +41,7 @@ dependencies:
   iconsax: ^0.0.8
   flutter_screenutil: ^5.9.0
   syncfusion_flutter_charts: ^24.1.47+2
+  fl_chart: ^0.66.1
 
 dev_dependencies:
   flutter_test:
