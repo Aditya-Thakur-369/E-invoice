@@ -20,8 +20,13 @@ class MainApp extends StatelessWidget {
         routeInformationParser: router.routeInformationParser,
         routeInformationProvider: router.routeInformationProvider,
         routerDelegate: router.routerDelegate,
-        theme: ThemeData.light(useMaterial3: true),
-        darkTheme: ThemeData.dark(useMaterial3: true),
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.indigo,
+            background: const Color(0xFFDCE8EF),
+          ),
+        ),
         themeMode: ThemeMode.system,
       ),
     );
