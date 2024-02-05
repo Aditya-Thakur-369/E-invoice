@@ -9,5 +9,14 @@ class AppRouter {
 }
 
 class Routes {
-  static AppRouter homescreen = AppRouter(name: "/", path: "/");
+  static AppRouter navigation = AppRouter(name: "/root", path: "/");
+  static AppRouter homescreen = AppRouter(name: "home", path: "/home");
+  static AppRouter clientscreen =
+      AppRouter(name: "clientscreen", path: "/clientscreen");
+  static AppRouter invoicescreen =
+      AppRouter(name: "invoicescreen", path: "/invoicescreen");
+  static AppRouter inventoryscreen =
+      AppRouter(name: "inventoryscreen", path: "/inventoryscreen");
+  static AppRouter ledger =
+      AppRouter(name: "ledgerscreen", path: "/ledgerscreen");
 }

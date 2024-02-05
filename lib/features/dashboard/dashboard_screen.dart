@@ -1,13 +1,17 @@
-import 'package:e_invoice/features/bottom_bar.dart';
-import 'package:e_invoice/features/dashboard/widgets/analysis_chart.dart';
-import 'package:e_invoice/features/dashboard/widgets/appbar.dart';
-import 'package:e_invoice/features/dashboard/widgets/custom_cards.dart';
-import 'package:e_invoice/features/dashboard/widgets/customcupertino_button.dart';
-import 'package:e_invoice/features/dashboard/widgets/expenses_chart.dart';
+
+import "package:e_invoice/features/dashboard/model/statics_model.dart";
+import 'widgets/analysis_chart.dart';
+import '''
+package:e_invoice/features/dashboard/widgets/appbar.dart''';
+import '''
+package:e_invoice/features/dashboard/widgets/custom_cards.dart''';
+import '''
+package:e_invoice/features/dashboard/widgets/customcupertino_button.dart''';
+import '''
+package:e_invoice/features/dashboard/widgets/expenses_chart.dart''';
 import 'package:e_invoice/features/dashboard/widgets/linechart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class DashBoardScreen extends StatefulWidget {
@@ -31,41 +35,6 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CustomNavBar(
-        currentIndex: selectedIndex,
-        onItemTap: (_) {
-          if (selectedIndex == _) {
-            return;
-          }
-          setState(() {
-            selectedIndex = _;
-          });
-        },
-        items: [
-          MayAppBarItem(
-            icons: Iconsax.activity,
-            label: "Dashboard",
-          ),
-          MayAppBarItem(
-            icons: Iconsax.user,
-            selectedIcon: Iconsax.user4,
-            label: "Clients",
-          ),
-          MayAppBarItem(
-            icons: Iconsax.bill,
-            selectedIcon: Iconsax.bill,
-            label: "Invoices",
-          ),
-          MayAppBarItem(
-            icons: Iconsax.box,
-            label: "Inventory",
-          ),
-          MayAppBarItem(
-            icons: Iconsax.wallet_1,
-            label: "Ledger",
-          ),
-        ],
-      ),
       body: CustomScrollView(
         slivers: [
           const AppBarView(),
@@ -285,13 +254,4 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
       ),
     );
   }
-}
-
-class StatisticsModel {
-  String title;
-  String value;
-  StatisticsModel({
-    required this.title,
-    required this.value,
-  });
 }

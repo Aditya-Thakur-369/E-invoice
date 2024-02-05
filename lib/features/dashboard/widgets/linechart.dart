@@ -132,7 +132,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
           );
         },
         getDrawingVerticalLine: (value) {
-          return  const FlLine(
+          return const FlLine(
             // color: AppColors.mainGridLineColor,
             color: Colors.purpleAccent,
             strokeWidth: 1,
@@ -187,7 +187,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
           gradient: LinearGradient(
             colors: gradientColors,
           ),
-          barWidth: 5,
+          barWidth: 3,
           isStrokeCapRound: true,
           dotData: const FlDotData(
             show: false,
@@ -279,7 +279,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
                   .lerp(0.2)!,
             ],
           ),
-          barWidth: 5,
+          barWidth: 3,
           isStrokeCapRound: true,
           dotData: const FlDotData(
             show: false,
